@@ -1,0 +1,69 @@
+/* Concertar o CSS e o HTML */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #2E6162;
+}
+.navbar{
+    color: black;
+    position: sticky;
+    top: 0;
+    background-color: #ffeee8;
+}
+.navcontainer{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+ul{
+    
+    text-align: right;
+    list-style: none;
+}
+li{
+    
+    display: inline-block;
+    padding: 12px;
+}
+.logo{
+    font-size: 3em;
+}
+.section1{
+    background-color: #ffeee8;
+    height: 643px;
+    text-align: left;
+    justify-content: center;
+}
+.content-text1{
+    justify-content: space-between;
+    padding:6% 15% 6%;
+}
+.text1{
+    font-size: 3.8em;
+    font-weight: 600;
+}
+hr{
+    margin: 40px 0;
+    width: 170px;
+    border: 0;
+    border-top: 8px solid white;
+    border-radius: 10px;
+  }
+.paragraph1{
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+.image{
+    position: fixed;
+    width: 48%;
+    top: 180px;
+    left: 1000px;
+}
