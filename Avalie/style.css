@@ -1,69 +1,178 @@
-/* Concertar o CSS e o HTML */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-}
-body{
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    color: #2E6162;
 }
-.navbar{
-    color: black;
-    position: sticky;
-    top: 0;
-    background-color: #ffeee8;
-}
-.navcontainer{
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-}
-ul{
-    
-    text-align: right;
-    list-style: none;
-}
-li{
-    
-    display: inline-block;
-    padding: 12px;
-}
-.logo{
-    font-size: 3em;
-}
-.section1{
-    background-color: #ffeee8;
-    height: 643px;
-    text-align: left;
+
+body {
     justify-content: center;
+    align-items: center;
 }
-.content-text1{
+
+/* container que cobre a página inteira */
+.container {
+    background-color:#FFEEE8;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    padding:6% 15% 6%;
+    flex-direction: column;
 }
-.text1{
-    font-size: 3.8em;
-    font-weight: 600;
+/* Barra de menu */
+.navbar {
+    width: 100%;
+    height: 400%;
+    display: flex;
+    align-items: center;
 }
-hr{
-    margin: 40px 0;
+
+.logo {
+    width: 200px;
+    margin: 25px 20px;
+}
+
+nav {
+    margin-right: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+.list {
+    color: #2E6162;
+    font-size: 18px;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+.list::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #44582475;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+.list:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.list:hover{
+    color: #44582475;
+}
+
+/* div da seção inteira */
+.box-section {
+    /* top, right, bottom, left */
+    padding: 0 10px 1px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 98px 0;
+}
+
+/* div do texto */
+.box-text {
+    width: 50%;
+    padding-left: 100px;
+}
+
+/* Parágrafo */
+h3 {
+    line-height: 40px;
+    width: 160%;
+    font-size: 22px;
+    color: #2E6162;
+    font-weight: 20;
+    margin: 0px 0;
+}
+/* linha separadora branca */
+hr {
+    margin: 30px 100px;
     width: 170px;
     border: 0;
     border-top: 8px solid white;
     border-radius: 10px;
-  }
-.paragraph1{
-    font-size: 1.3em;
-    line-height: 1.8em;
 }
-.image{
-    position: fixed;
-    width: 48%;
-    top: 180px;
-    left: 1000px;
+/* div da imagem */
+.box-image {
+    display: flex;
+    align-items: center;
+}
+
+/* imagem esquerda */
+.data {
+    padding-right: 200px;
+    width:100%;
+}
+
+/* Animação palavras */
+.wrapper{
+    margin-left: 145px;
+    display: block;
+    width: 70%;
+    overflow: hidden;
+}
+.wrapper .static-txt{
+    margin-left: 100px;
+    margin-top: 12px;
+    color: #2E6162;;
+    font-size: 60px;
+    font-weight: 400;
+}
+.wrapper .dynamic-txts{
+    margin-left: 100px;
+    height: 90px;
+    line-height:90px ;
+    overflow: hidden;
+}
+.dynamic-txts li{
+    color: #44582475;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+
+}
+@keyframes slide{
+    100%{
+        top:-360px;
+    }
+ }
+.dynamic-txts li span{
+    position: relative;
+}
+.dynamic-txts li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 200%;
+    width: 100%;
+    background:#FFEEE8 ;
+    animation: typing 1.5s steps(66) infinite;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }

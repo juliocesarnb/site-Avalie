@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,35 +11,53 @@
     <!-- CONCERTAR HTML E CSS!!! -->
 
 </head>
+
 <body>
-    <div class="navbar">
-        <div class="navcontainer">
-        <p class="logo">Logo</p>
-        <ul>
-            <li>Quem somos</li>
-            <li>Soluções</li>
-            <li>Contato</li>
-        </ul>
-    </div>
-</div>
-   <main>
-       <section class="section1">
-           <div class="content-text1">
-                <div class="text1">
-                    Use dados para...<br> guiar suas decisões
+    <div class="container">
+        <!-- Logo da página-->
+        <div class="navbar">
+            <img  class="logo" src="./imagens/logomeno-removebg-preview.png" alt="" width=200px>
+            <nav>
+                <ul class="menu-list">
+                    <a href="#">
+                        <li class="list">Quem somos</li>
+                    </a>
+                    <a href="#">
+                        <li class="list">Soluções</li>
+                    </a>
+                    <a href="#">
+                        <li class="list">Contato</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="box-section">
+            <div class="wrapper">
+                <div class="static-txt">Use dados para...</div>
+                    <ul class="dynamic-txts">
+                        <li><span> guiar suas decisões </span></li>
+                        <li><span>seus estudos</span></li>
+                        <li><span>seu tempo</span></li>
+                        <li><span>seus passos</span></li>
+                    </ul>
+
+                    <hr>
+                    
+                    <div class="box-text">
+                        <h3>Por meio da inteligência de dados, a Avalie oferece uma visão ampla do funcionamento da sua escola, além de possibilitar novas formas para engajar pais, professores e estudantes.</h3>
+                   </div>
+
                 </div>
-                <hr>
-
-            <p class="paragraph1">Por meio da inteligência de dados, a Avalie oferece uma visão <br> ampla do funcionamento da sua escola, além de possibilitar <br> novas formas para engajar pais, professores e estudantes.
-            </p>
-
-            <div class="image">
-                <img src="./imagens/image-data.svg" alt="image-data" width="67%">
+                
+                
+            <div class="box-image">
+                <img class="data" src="./imagens/image-data.svg" alt="imagem ilustrativa de dados">
             </div>
         </div>
-       </section>
-     
-   </main>
 
+    </div>
 </body>
+
 </html>
